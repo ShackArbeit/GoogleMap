@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
+import Link from 'next/link'
 import '../globals.css'
 
 const SideNav = () => {
@@ -16,10 +17,12 @@ const SideNav = () => {
           <Button variant="contained" {...bindTrigger(popupState)} 
             sx={{width:'50%',marginTop:'2rem',marginBottom:'2rem'}}
           >
-            Dashboard
+            不同功能
           </Button>
           <Menu {...bindMenu(popupState)}>
-            <MenuItem onClick={popupState.close}>Profile</MenuItem>
+            <MenuItem onClick={popupState.close}>
+            <Link href="/FunctionOne/First">地圖樣式</Link>
+            </MenuItem>
             <MenuItem onClick={popupState.close}>My account</MenuItem>
             <MenuItem onClick={popupState.close}>Logout</MenuItem>
           </Menu>

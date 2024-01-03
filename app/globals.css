@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+  position:relative;
+  margin:0;
+  padding:0;
+  box-sizaing:border-box
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -16,4 +21,13 @@ body {
   flex-direction:column;
   justify-content:center;
   align-items:center;
+}
+.MapContainer{
+  width:85vw;
+  height:100vh;
+}
+.StylePanelContainer{
+  position:absolute;
+  top:5rem;
+  left:5rem;
 }
