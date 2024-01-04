@@ -19,35 +19,35 @@ type StylePanelsProps = {
 
 const StylePanels:React.FC<StylePanelsProps> = ({ setSelectedStyle}) => {
     const [Style, setStyle] = useState('');
-    const  getSelectedStyle=()=>{
-        switch(Style){
-            case 'Dark Mode':
-                return DarkMode
-            case 'Night Mode':
-                return NightMode
-            case 'Silver Mode':
-                return SilverMode
-            case 'Retro Mode':
-                return RetroMode
-            case 'Auber Mode':
-                return AuberMode
-            default:
-                return StandMode
-        }
-    }
-    const getSelect=getSelectedStyle()
     const handleChange = (event: SelectChangeEvent) => {
-        setStyle(event.target.value);
-        setSelectedStyle(getSelect);
+      const selectedStyle = getSelectedStyle(event.target.value);
+      setStyle(event.target.value);
+      setSelectedStyle(selectedStyle);
     };
-
+  
+    const getSelectedStyle = (selectedStyleName: string) => {
+      switch (selectedStyleName) {
+        case 'Dark Mode':
+          return DarkMode;
+        case 'Night Mode':
+          return NightMode;
+        case 'Silver Mode':
+          return SilverMode;
+        case 'Retro Mode':
+          return RetroMode;
+        case 'Auber Mode':
+          return AuberMode;
+        default:
+          return StandMode;
+      }
+    };
   
   return (
     <div
 className='StylePanelContainer'
 
     >
-        <FormControl sx={{ m: 1, minWidth: 80 }}>
+        <FormControl sx={{ m: 1, minWidth: 150}}>
         <InputLabel id="demo-simple-select-autowidth-label">Styles</InputLabel>
         <Select
           labelId="demo-simple-select-autowidth-label"
@@ -58,7 +58,7 @@ className='StylePanelContainer'
           label="Style"
         >
           <MenuItem value="">
-            {/* <em>Non</em>  */}
+            <em>Standard Mode</em> 
           </MenuItem>
           <MenuItem value={'Dark Mode'}>Dark Mode</MenuItem>
           <MenuItem value={'Retro Mode'}>Retro Mode</MenuItem>
