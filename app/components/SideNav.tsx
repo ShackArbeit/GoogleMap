@@ -21,9 +21,11 @@ const SideNav = () => {
           </Button>
           <Menu {...bindMenu(popupState)}>
             <MenuItem onClick={popupState.close}>
-            <Link href="/FunctionOne/First">地圖樣式</Link>
+            <Link href="/FunctionOne/First">改變樣式</Link>
             </MenuItem>
-            <MenuItem onClick={popupState.close}>My account</MenuItem>
+            <MenuItem onClick={popupState.close}>
+            <Link href="/FunctionOne/Second">路線規劃</Link>
+            </MenuItem>
             <MenuItem onClick={popupState.close}>Logout</MenuItem>
           </Menu>
         </React.Fragment>
