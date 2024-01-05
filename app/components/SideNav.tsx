@@ -17,7 +17,7 @@ const SideNav = () => {
           <Button variant="contained" {...bindTrigger(popupState)} 
             sx={{width:'50%',marginTop:'2rem',marginBottom:'2rem'}}
           >
-            不同功能
+            展示一
           </Button>
           <Menu {...bindMenu(popupState)}>
             <MenuItem onClick={popupState.close}>
@@ -39,10 +39,12 @@ const SideNav = () => {
           <Button variant="contained" {...bindTrigger(popupState)}
            sx={{width:'50%',marginTop:'2rem',marginBottom:'2rem'}}
           >
-            Dashboard
+            展示二
           </Button>
           <Menu {...bindMenu(popupState)}>
-            <MenuItem onClick={popupState.close}>Profile</MenuItem>
+            <MenuItem onClick={popupState.close}>
+            <Link href="/FunctionTwo/First">縮放地圖</Link>
+            </MenuItem>
             <MenuItem onClick={popupState.close}>My account</MenuItem>
             <MenuItem onClick={popupState.close}>Logout</MenuItem>
           </Menu>
