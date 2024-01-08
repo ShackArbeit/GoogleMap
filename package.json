@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@deck.gl/core": "^8.9.33",
+    "@deck.gl/google-maps": "^8.9.33",
+    "@deck.gl/layers": "^8.9.33",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",

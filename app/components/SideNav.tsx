@@ -48,7 +48,9 @@ const SideNav = () => {
             <MenuItem onClick={popupState.close}>
             <Link href="/FunctionTwo/Second">標記資訊</Link>
             </MenuItem>
-            <MenuItem onClick={popupState.close}>Logout</MenuItem>
+            <MenuItem onClick={popupState.close}>
+            <Link href="/FunctionTwo/Three">DeckGL 覆蓋</Link>
+            </MenuItem>
           </Menu>
         </React.Fragment>
       )}
