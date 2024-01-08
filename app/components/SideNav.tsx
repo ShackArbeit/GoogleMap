@@ -45,7 +45,9 @@ const SideNav = () => {
             <MenuItem onClick={popupState.close}>
             <Link href="/FunctionTwo/First">縮放地圖</Link>
             </MenuItem>
-            <MenuItem onClick={popupState.close}>My account</MenuItem>
+            <MenuItem onClick={popupState.close}>
+            <Link href="/FunctionTwo/Second">標記資訊</Link>
+            </MenuItem>
             <MenuItem onClick={popupState.close}>Logout</MenuItem>
           </Menu>
         </React.Fragment>
